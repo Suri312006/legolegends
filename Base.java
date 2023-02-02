@@ -1,4 +1,4 @@
-public class Skeleton {
+public class Base {
     private double health;
     private double AD;
     private double AP;
@@ -6,7 +6,15 @@ public class Skeleton {
     private double magicResist;
     private boolean alive;
 
-    public Skeleton(double health, double AD, double AP, double armor, double magicResist, boolean alive){
+    public Base(){
+        this.health = 100;
+        this.AD = 5;
+        this.AP = 15;
+        this.armor = 20;
+        this.magicResist = 20;
+        this.alive = true;
+    }
+    public Base(double health, double AD, double AP, double armor, double magicResist, boolean alive){
         this.health = health;
         this.AD = AD;
         this.AP = AP;
@@ -15,7 +23,7 @@ public class Skeleton {
         this.alive = alive;
     }
 
-    public void basicAttack( Skeleton other){
+    public void basicAttack( Base other){
         other.health -= this.AD;
     }
 
