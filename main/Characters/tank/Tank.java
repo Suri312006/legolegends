@@ -15,10 +15,10 @@ public class Tank extends Base{
     }
     public void hit(double damage, Base other){
         if(!stall) {
-            super.hit(damage*(1-armor));
+            super.getHit(damage*(1-armor));
         }
         else{
-            other.hit(armor * 0.5);
+            other.getHit(armor * 0.5);
         }
         stall = false;
 

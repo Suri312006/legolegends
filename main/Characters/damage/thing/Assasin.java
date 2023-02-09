@@ -1,4 +1,4 @@
-package main.Characters.damage.assassin;
+package main.Characters.damage.thing;
 
 import main.Characters.Base;
 import main.Characters.damage.Damage;

@@ -16,10 +16,10 @@ public class Fighter extends Base {
 
     //bite method that does percentage HP damage
     public void bite(Base other){
-        other.hit(other.getHealth()*maxHpPercentage);
+        other.getHit(other.getHealth()*maxHpPercentage);
     }
 
     public void basicAttack(Base other){
-        other.hit(this.getAD() *(1+InverseADMult*(1/getHealth())));
+        other.getHit(this.getAD() *(1+InverseADMult*(1/getHealth())));
     }
 }

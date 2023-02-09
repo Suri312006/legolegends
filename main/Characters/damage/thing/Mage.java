@@ -1,4 +1,4 @@
-package main.Characters.damage.mage;
+package main.Characters.damage.thing;
 
 import main.Characters.Base;
 import main.Characters.damage.Damage;
@@ -12,6 +12,6 @@ public class Mage extends Damage {
     }
 
     public void basicAttack(Base other){
-       other.hit( super.getAP()*0.5 + super.getAD() *0.5);
+       other.getHit( super.getAP()*0.5 + super.getAD() *0.5);
     }
 }

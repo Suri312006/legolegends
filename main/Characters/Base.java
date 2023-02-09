@@ -39,8 +39,11 @@ public class Base {
     }
 
     //mutator methods
-    public void hit(double damage){
+    public void getHit(double damage){
         health -= damage;
+    }
+    public void hit(Base other, double damage){
+        other.getHit(damage);
     }
     public void die(){
         alive = false;
@@ -48,8 +51,8 @@ public class Base {
 
 
     //game methods
-    public void basicAttack( Base other){
-        other.hit(this.AD);
+    public void basicAttack(Base other){
+        hit(other,this.AD);
     }
 
 
