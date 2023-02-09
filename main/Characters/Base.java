@@ -23,6 +23,9 @@ public class Base {
 
     //accessor methods
     public double getHealth(){
+        if(health < 0){
+            return 0;
+        }
         return health;
     }
     public double getAP(){
@@ -38,6 +41,10 @@ public class Base {
         return alive;
     }
 
+    public void addHealth(double additionalHealth){
+        health+=additionalHealth;
+    }
+
     //mutator methods
     public void getHit(double damage){
         health -= damage;
@@ -45,6 +52,15 @@ public class Base {
     public void hit(Base other, double damage){
         other.getHit(damage);
     }
+
+    public boolean manaCheck(double moveCost){
+        if(mana > moveCost){
+            mana-=moveCost;
+            return true;
+        }
+        return false;
+    }
+
     public void die(){
         alive = false;
     }

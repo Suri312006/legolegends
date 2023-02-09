@@ -5,9 +5,12 @@ public class Tank extends Base{
     private double armor;
     private boolean stall;
 
-    public Tank(double health, double AD, double AP, double mana, double armor, boolean alive) {
+    private double healAmount;
+
+    public Tank(double health, double AD, double AP, double healAmount, double mana, double armor, boolean alive) {
         super(health, AD, AP,mana, alive);
         this.armor = armor;
+        this.healAmount = healAmount;
     }
 
     public void stallMove(){
@@ -26,5 +29,9 @@ public class Tank extends Base{
 
     public boolean getStall(){
         return stall;
+    }
+
+    public void heal(){
+        super.addHealth(20);
     }
 }

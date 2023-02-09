@@ -7,7 +7,9 @@ import main.Characters.tank.Tank;
 import java.util.*;
 public class main {
 
-    boolean game = true;
+    static volatile boolean game = true;
+
+    static Base Assasin = new Assasin();
 
     Scanner input = new Scanner(System.in);
     static Base Player1 = new Assasin(100, 12, 30,50, true);
@@ -19,14 +21,10 @@ public class main {
     public static void main(String[] args){
 
 
-        while(game = true){
 
-        }
+
 
     }
 
-    /*
-    while loop as a game?
-    scanner?
-     */
+
 }

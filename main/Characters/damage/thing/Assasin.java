@@ -7,13 +7,26 @@ public class Assasin extends Damage {
     //high AD
     //execute
     //dodge change
+    static double executeMoveCost = 15;
 
     public Assasin(double health, double AD, double AP, double mana, boolean alive) {
         super(health, AD, AP, mana, alive);
     }
+    public Assasin(){
+        super(100, 20, 40, 0, true);
+    }
 
     public void execute(Base other){
-        other.die();
+        if(manaCheck(executeMoveCost)) {
+            other.die();
+        }
+        else{
+            System.out.println("Cannot use execute move, not enough mana");
+        }
+    }
+
+    public void slash(Base other){
+        other.getHit(super.getAD()*2);
     }
 
 
