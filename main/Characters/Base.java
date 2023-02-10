@@ -6,12 +6,27 @@ public class Base {
     private double mana;
     private boolean alive;
 
+    private double defHealth = 100;
+    private double defAD = 15;
+    private double defAP = 20;
+    private double defMana = 40;
+    private boolean defAlive = true;
+
+
+
     public Base(){
-        this.health = 100;
-        this.AD = 5;
-        this.AP = 15;
-        this.mana = 15;
-        this.alive = true;
+        this.health = defHealth;
+        this.AD = defAD;
+        this.AP = defAP;
+        this.mana = defMana;
+        this.alive = defAlive;
+    }
+    public Base(double AD){
+        this.health = defHealth;
+        this.AD = AD;
+        this.AP = defAP;
+        this.mana = defMana;
+        this.alive = defAlive;
     }
     public Base(double health, double AD, double AP,double mana, boolean alive){
         this.health = health;

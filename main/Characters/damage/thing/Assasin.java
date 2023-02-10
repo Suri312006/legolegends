@@ -13,7 +13,7 @@ public class Assasin extends Damage {
         super(health, AD, AP, mana, alive);
     }
     public Assasin(){
-        super(100, 20, 40, 0, true);
+        super(20);
     }
 
     public void execute(Base other){
