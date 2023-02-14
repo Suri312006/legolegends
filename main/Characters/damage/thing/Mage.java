@@ -10,8 +10,9 @@ public class Mage extends Damage {
         super(health, AD, AP, mana, alive);
     }
     public Mage() {
-        super(100, 15, 40, 60, true);
+        super(15, 40);
     }
+
 
     public void basicAttack(Base other){
        other.getHit( super.getAP()*0.5 + super.getAD() *0.5);
@@ -26,6 +27,4 @@ public class Mage extends Damage {
         }
 
     }
-
-
 }

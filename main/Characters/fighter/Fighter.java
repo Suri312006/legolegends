@@ -17,7 +17,7 @@ public class Fighter extends Base {
     }
     public Fighter() {
         super(120, 20, 25, 40, true);
-        this.maxHpPercentage = 15;
+        this.maxHpPercentage = 0.15;
     }
 
     //bite method that does percentage HP damage

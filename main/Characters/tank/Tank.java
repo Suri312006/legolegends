@@ -12,6 +12,11 @@ public class Tank extends Base{
         this.armor = armor;
         this.healAmount = healAmount;
     }
+    public Tank() {
+        super(150, 7, 15,30, true);
+        this.armor =20;
+        this.healAmount = 15;
+    }
 
     public void stallMove(){
         stall = true;

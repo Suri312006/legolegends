@@ -21,7 +21,7 @@ public class Base {
         this.mana = defMana;
         this.alive = defAlive;
     }
-    public Base(double AD){
+    public Base(double AD, double AP){
         this.health = defHealth;
         this.AD = AD;
         this.AP = defAP;
